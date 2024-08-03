@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Church</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/w.png" alt="">
+                    <div class="signup-img-content">
+                        <h2>Welcome to Church!! </h2>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form" action="/submit">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="full_name" class="required">Full Name</label>
+                                    <input type="text" name="full_name" id="full_name" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="phone_number" class="required">Phone Number</label>
+                                    <input type="text" name="phone_number" id="phone_number" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="dob" class="required">Date of Birth</label>
+                                    <input type="date" id="dob" name="dob" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="email" name="email" id="email" required />
+                                </div>
+                                <div class="form-input">
+                                    <label for="invited_by">Who Invited You?</label>
+                                    <input type="text" name="invited_by" id="invited_by" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-select">
+                                    <div class="required label-flex ">
+                                        <label for="gender">Gender</label>
+                                    </div>
+                                    <div class="select-list">
+                                        <select name="gender" id="gender" required>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Stay or Visit Section -->
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="stay_or_visit">Are you Here to Stay or Visit?</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="stay_or_visit" id="stay" value="Stay" checked />
+                                            <label for="stay">Stay</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="stay_or_visit" id="visit" value="Visit" />
+                                            <label for="visit">Visit</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Born Again Section -->
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="born_again">Are you Genuinely born again?</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="born_again" id="yes" value="Yes" checked />
+                                            <label for="yes">Yes</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="born_again" id="no" value="No" />
+                                            <label for="no">No</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="born_again" id="dont_know" value="I Don't Know" />
+                                            <label for="dont_know">I Don't Know.</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="spiritual_need">Do You Have Any Spiritual Need or Problem or Addiction?</label>
+                                    <input type="text" name="spiritual_need" id="spiritual_need" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="comments">Any Comment or Suggestion for Improvement?</label>
+                                    <input type="text" name="comments" id="comments" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="donate-us">
+                            <!-- <label>How was Service today?</label>
+                            <div class="price_slider ui-slider ui-slider-horizontal">
+                                <div id="slider-margin"></div>
+                                <span class="donate-value" id="value-lower"></span>
+                            </div> -->
+                             <!-- Slider Rating Section -->
+                        <div class="form-group">
+                            <label for="rating" class="required">Rate Your Experience</label>
+                            <div class="rating-slider-container">
+                                <div id="rating-slider" class="rating-slider"></div>
+                                <div class="rating-value">Rating: <span id="rating-value">3</span> out of 10</div>
+                                <input type="hidden" name="rating" id="rating" value="3">
+                            </div>
+                        </div>
+                            
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize the slider
+            var ratingSlider = document.getElementById('rating-slider');
+
+            noUiSlider.create(ratingSlider, {
+                start: 5,
+                step: 1,
+                range: {
+                    'min': 1,
+                    'max': 10
+                },
+                tooltips: true,
+                format: wNumb({
+                    decimals: 0
+                })
+            });
+
+            // Update the hidden input field and display the value
+            ratingSlider.noUiSlider.on('update', function(values, handle) {
+                $('#rating').val(values[handle]);
+                $('#rating-value').text(values[handle]);
+            });
+        });
+    </script>
+</body>
+</html>
