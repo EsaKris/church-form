@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Set up the SQLite database
 const db = new sqlite3.Database(':memory:'); // Use ':memory:' for in-memory database or provide a path for a file-based database
